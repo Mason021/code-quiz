@@ -92,9 +92,11 @@ const questions = [
 ];
 
 var startButton = document.querySelector("#startButton")
-var timer = 120
+var timer = 300
 var timeRemaining = document.querySelector("#timeRemaining")
 var currentQuestion;
+var rightWrong = document.querySelector("#rightWrong")
+var highscoreEntry = document.querySelector("#highscoreEntry")
 
 function startQuiz() {
     // display questions //
@@ -111,9 +113,24 @@ function startTimer() {
         timer--
         timeRemaining.textContent= timer
         console.log(timer)
+    if (timer <= 0 || currentQuestion >=questions.length) {
+        clearInterval(quizInterval);
+        document.querySelector("#quizArea").setAttribute("class", "hidden")
+        document.querySelector("#finalScoreShown").setAttribute("class", "")
+        console.log("time expired")
+        document.querySelector("#playerHighscore").textContent = timer
+    }
     }, 1000)
 
 }
+
+// function stopTimer() {
+//     if (timer <=0) {
+//         alert("Times Up!Thank you for playing!")
+//         confirm("would you like to play again?")
+
+//     } startQuiz ()
+// }
 function displayQuestions() {
     var questionBlock = document.querySelector("#questionBlock")
     questionBlock.textContent=questions[currentQuestion].question
@@ -127,13 +144,24 @@ function displayQuestions() {
 function checkAnswer() {
     console.log(this.textContent)
     if (this.textContent === questions[currentQuestion].answer) {
-        console.log("you got it right")
+        rightWrong.textContent= "Yo ho ho you got the last one right!"
+        // console.log("Yo ho ho you got it right!")
     }
     else {
-        console.log("you should be ashamed, go study in a corner, go read the books")
+        rightWrong.textContent= "Thats a miss!  Keep it up and you'll find yourself walking the plank"
+        timer = timer -15
+        // console.log("Wrong, miss anymore and you'll find yourself walking the plank")
     }
     currentQuestion++ 
-    displayQuestions()
+    if (currentQuestion < questions.length) {
+        displayQuestions()
+    }
 }
 
+function highscoreSubmit() {
+    var playerInitials= document.querySelector("#playerInitials").value
+    console.log(playerInitials)
+}
+
+highscoreEntry.addEventListener("click", highscoreSubmit)
 startButton.addEventListener("click", startQuiz)

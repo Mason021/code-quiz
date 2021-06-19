@@ -11,6 +11,34 @@ body {
 .hidden  {
     display: none;
 }
+
+ul.bulletpointsGone {
+    list-style-type: none;
+}
 /* main {
     flex: 1 0 auto;
 } */
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: blanchedalmond;}
+  }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px) {
+    body {background-color: blanchedalmond;}
+  }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    body {background-color: blanchedalmond;}
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    body {background-color: blanchedalmond;}
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    body {background: blanchedalmond;}
+  }

@@ -16,11 +16,11 @@
         <div class="row">
             <!--See highscores-->
             <div class="col-6">
-                <button></button>
+                <button>(HIGH SCORES) X marks the spot </button>
             </div>
             <!--Timer-->
             <div class="col-6">
-                <p id="timeRemaining" class="">120</p> <!-- will be timer, needs work-->
+                <p id="timeRemaining" class="">300</p> <!-- will be timer, needs work-->
             </div>
         </div>
     </header>
@@ -44,7 +44,7 @@
                     <div class="col-3"></div>
                     <div class="col-6">
                         <h2 id="questionBlock">This is where questions will go</h2>
-                        <ul>
+                        <ul class ="bulletpointsGone">
                             <li><button id="" value="" type="button"
                             class="choice">Answer1</button></button></li>
                             <li><button id="" value="" type="button"
@@ -54,22 +54,23 @@
                             <li><button id="" value="" type="button"
                             class="choice">Answer4</button></button></li>
                         </ul>
-                        <div id="" class="">
+                        <div id="rightWrong" class="">
                             <hr>
+                            <p></p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!--this is where the player will see their final score-->
-            <section id="" class="hidden">
+            <section id="finalScoreShown" class="hidden">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
                         <h2>Shiver me timbers, you've completed ye quest at sea! Lets 'sea' how you did</h2>
-                        <p>Yo ho ho your total aboard me vessel today is: <span id="" class="">0</span></p>
-                        <p>Add ye treasured initials to the high score: <span class=""><input placeholder="" id="" /></span>
-                        <button id="" class="">(Submit) "who's the captain now" </button></p>
+                        <p>Yo ho ho your total aboard me vessel today is: <span id="playerHighscore" class="">0</span></p>
+                        <p>Add ye treasured initials to the high score: <span class=""><input placeholder="" id="playerInitials" /></span>
+                        <button id="highscoreEntry" class="">(Submit) "who's the captain now" </button></p>
                     </div>
                 </div>
             </section>
