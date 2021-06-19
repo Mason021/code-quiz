@@ -8,6 +8,9 @@ body {
     display: flex;
 }
 
+.hidden  {
+    display: none;
+}
 /* main {
     flex: 1 0 auto;
 } */

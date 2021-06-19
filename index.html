@@ -20,7 +20,7 @@
             </div>
             <!--Timer-->
             <div class="col-6">
-                <p class=""><timer:120s></timer:120s></p> <!-- will be timer, needs work-->
+                <p id="timeRemaining" class="">120</p> <!-- will be timer, needs work-->
             </div>
         </div>
     </header>
@@ -28,31 +28,31 @@
     <main>
         <!--intro to the game-->
         <div class="">
-            <section>
+            <section id="main">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
                         <h1 class="">YaRRrr Get Ready for Me Coding Trivia Challenge Matey!</h1>
                         <p class="">Get ready to answer the following questions as quickly as ye can.  Many scallywags like yourself have gone in search of me treaure, The fabled high score. But beware oh' keeper of factoid knowledge, every time you answer incorrectly -15seconds will be taken from your overall score by Davey Jones himself.  Do you have what it takes to become captain of this ship?</p>
-                        <button id="" type="button" class="">Start Ye Trivia Adventure</button>
+                        <button id="startButton" type="button" class="">Start Ye Trivia Adventure</button>
                     </div>
                 </div>
             </section>
             <!--The Questions and Answers-->
-            <section>
+            <section id="quizArea" class="hidden">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
-                        <h2>This is where questions will go</h2>
+                        <h2 id="questionBlock">This is where questions will go</h2>
                         <ul>
                             <li><button id="" value="" type="button"
-                            class=""></button>Answer1</button></li>
+                            class="choice">Answer1</button></button></li>
                             <li><button id="" value="" type="button"
-                            class=""></button>Answer2</button></li>
+                            class="choice">Answer2</button></button></li>
                             <li><button id="" value="" type="button"
-                            class=""></button>Answer3</button></li>
+                            class="choice">Answer3</button></button></li>
                             <li><button id="" value="" type="button"
-                            class=""></button>Answer4</button></li>
+                            class="choice">Answer4</button></button></li>
                         </ul>
                         <div id="" class="">
                             <hr>
@@ -62,7 +62,7 @@
             </section>
 
             <!--this is where the player will see their final score-->
-            <section id="">
+            <section id="" class="hidden">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
@@ -75,13 +75,12 @@
             </section>
 
             <!-- this is the highscore section -->
-            <section id="">
+            <section id="" class="hidden">
                 <div class="row">
                     <div class="col-3"></div>
                     <div class="col-6">
                         <h2>Who is the captain of this ship (High Scores)</h2>
                         <ol id="">
-
                         </ol>
                         <button id="" class="">Walk the plank (CLEAR SCORES)</button>
                         <button id="" class="">Lets sail again (GO BACK)</button>

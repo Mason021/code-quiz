@@ -90,3 +90,50 @@ const questions = [
         answer: "a. Vitamin C"
     }
 ];
+
+var startButton = document.querySelector("#startButton")
+var timer = 120
+var timeRemaining = document.querySelector("#timeRemaining")
+var currentQuestion;
+
+function startQuiz() {
+    // display questions //
+    document.querySelector("#main").setAttribute("class", "hidden")
+    document.querySelector("#quizArea").setAttribute("class", "")
+    currentQuestion=0
+    // timer starts //
+    displayQuestions() 
+    startTimer()
+}
+
+function startTimer() {
+    var quizInterval = setInterval(function() {
+        timer--
+        timeRemaining.textContent= timer
+        console.log(timer)
+    }, 1000)
+
+}
+function displayQuestions() {
+    var questionBlock = document.querySelector("#questionBlock")
+    questionBlock.textContent=questions[currentQuestion].question
+    var choiceHTML = document.querySelectorAll(".choice")
+    for(i=0; i<choiceHTML.length; i++) {
+        choiceHTML[i].textContent=questions[currentQuestion].choices[i]
+        choiceHTML[i].addEventListener("click", checkAnswer)
+    }
+}
+
+function checkAnswer() {
+    console.log(this.textContent)
+    if (this.textContent === questions[currentQuestion].answer) {
+        console.log("you got it right")
+    }
+    else {
+        console.log("you should be ashamed, go study in a corner, go read the books")
+    }
+    currentQuestion++ 
+    displayQuestions()
+}
+
+startButton.addEventListener("click", startQuiz)
