@@ -144,7 +144,7 @@ function displayQuestions() {
 function checkAnswer() {
     console.log(this.textContent)
     if (this.textContent === questions[currentQuestion].answer) {
-        rightWrong.textContent= "Yo ho ho you got the last one right!"
+        rightWrong.textContent= "Yo Ho Ho you got the last one right!"
         // console.log("Yo ho ho you got it right!")
     }
     else {
@@ -160,6 +160,7 @@ function checkAnswer() {
 
 function highscoreSubmit() {
     var playerInitials= document.querySelector("#playerInitials").value
+    
     console.log(playerInitials)
 }
 

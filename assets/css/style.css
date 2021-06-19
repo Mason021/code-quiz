@@ -6,14 +6,56 @@ body {
     height: 100%;
     flex-direction: column;
     display: flex;
+    text-emphasis: bolder;
+    font-weight: bolder;
+    background-image: url(../images/pirate-map.jpg);
 }
 
+/* to hide away sections when not in use */
 .hidden  {
     display: none;
 }
 
+/* to remove the bullet points beside the answers */
 ul.bulletpointsGone {
     list-style-type: none;
+}
+
+/* button stylings */
+.choice {
+    transition-duration: 0.4s;
+}
+
+.choice:hover {
+    background-color: black;
+    color:white;
+}
+
+.startButtonStyle {
+    transition-duration: 0.4s;
+    font-weight: bold;
+    
+}
+
+.startButtonStyle:hover {
+    background-color: black;
+    color:white;
+}
+
+.highScoreStyle {
+    transition-duration: 0.4s;
+    background-image: url(../images/pirate-map.jpg);
+    color:white;
+    font-weight: bold;
+}
+
+.highScoreStyle:hover {
+    color:black;
+}
+/* timer positioning */
+
+.timerPosition {
+    text-align: right;
 }
 /* main {
     flex: 1 0 auto;
@@ -21,24 +63,33 @@ ul.bulletpointsGone {
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
     body {
-        background-color: blanchedalmond;}
+        background-image: url(../images/pirate-map.jpg);
+        position:fixed;}
   }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 600px) {
-    body {background-color: blanchedalmond;}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+    body {
+        background-image: url(../images/pirate-map.jpg);
+        position:fixed;}
   }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
-    body {background-color: blanchedalmond;}
+    body {
+        background-image: url(../images/pirate-map.jpg);
+        position:fixed;}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    body {background-color: blanchedalmond;}
+    body {
+        background-image: url(../images/pirate-map.jpg);
+        position:fixed;}
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
-    body {background: blanchedalmond;}
+    body {
+        background-image: url(../images/pirate-map.jpg);
+        position:fixed;}
   }
