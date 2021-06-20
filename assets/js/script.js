@@ -160,9 +160,20 @@ function checkAnswer() {
 
 function highscoreSubmit() {
     var playerInitials= document.querySelector("#playerInitials").value
-    
+
     console.log(playerInitials)
 }
 
 highscoreEntry.addEventListener("click", highscoreSubmit)
 startButton.addEventListener("click", startQuiz)
+
+// Event listener to clear the scores 
+clear.addEventListener("click", function () {
+    localStorage.clear();
+    location.reload();
+});
+
+// Event listener to move to index page
+goBack.addEventListener("click", function () {
+    window.location.replace("./index.html");
+});

@@ -52,10 +52,23 @@ ul.bulletpointsGone {
 .highScoreStyle:hover {
     color:black;
 }
+
+
+.submitStyle {
+    transition-duration: 0.4s;
+    font-weight: bold;
+        
+}
+    
+.submitStyle:hover {
+    background-color: black;
+    color:white;
+}
 /* timer positioning */
 
 .timerPosition {
     text-align: right;
+    font-weight: bolder;
 }
 /* main {
     flex: 1 0 auto;
@@ -63,33 +76,28 @@ ul.bulletpointsGone {
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
     body {
-        background-image: url(../images/pirate-map.jpg);
-        position:fixed;}
+        background-image: url(../images/pirate-map.jpg);}
   }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media screen and (min-width: 600px) and (max-width: 768px) {
     body {
-        background-image: url(../images/pirate-map.jpg);
-        position:fixed;}
+        background-image: url(../images/pirate-map.jpg);}
   }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     body {
-        background-image: url(../images/pirate-map.jpg);
-        position:fixed;}
+        background-image: url(../images/pirate-map.jpg);}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     body {
-        background-image: url(../images/pirate-map.jpg);
-        position:fixed;}
+        background-image: url(../images/pirate-map.jpg);}
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
     body {
-        background-image: url(../images/pirate-map.jpg);
-        position:fixed;}
+        background-image: url(../images/pirate-map.jpg);}
   }
