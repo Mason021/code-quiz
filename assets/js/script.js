@@ -118,7 +118,7 @@ function startTimer() {
         document.querySelector("#quizArea").setAttribute("class", "hidden")
         document.querySelector("#finalScoreShown").setAttribute("class", "")
         console.log("time expired")
-        document.querySelector("#playerHighscore").textContent = timer
+        document.querySelector("#playerHighscore").textContent = +timer
     }
     }, 1000)
 
@@ -161,9 +161,11 @@ function checkAnswer() {
 function highscoreSubmit() {
     var playerInitials= document.querySelector("#playerInitials").value
 
+ // player initials log and also have initials able to be entered after game need to figure out how to submit info to a highscore page//
     console.log(playerInitials)
 }
 
+//event listeners
 highscoreEntry.addEventListener("click", highscoreSubmit)
 startButton.addEventListener("click", startQuiz)
 
